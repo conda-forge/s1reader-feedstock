@@ -1,5 +1,5 @@
 {% set name = "s1reader" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/isce-framework/s1-reader/archive/v{{ version }}.tar.gz
-  sha256: 3086dc5f9687dbbc4b815ebba09aa32dbff8984d385bb6e16ecd95edabe4a327
+  sha256: c6ea75ea40a9499823ee7e01b1a3ad89a56112649c684f84e1f1ee86da8ff879
 
 build:
   entry_points:
