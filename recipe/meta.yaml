@@ -15,15 +15,15 @@ build:
   noarch: python
   script:
     - {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=42.0
     - pip >=21.3
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - numpy >=1.20
     - gdal >=3.0
     - isce3 >=0.13
@@ -42,6 +42,7 @@ test:
     - s1_info --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/isce-framework/s1-reader
